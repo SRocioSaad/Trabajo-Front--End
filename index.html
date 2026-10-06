@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online de TODO MATIENZO</title>
+    <link rel="icon" type="image/png" href="assets/imagenes/mate-de-coca.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body> 
+    <header> 
+        <h1>Tienda</h1>
+
+        <nav class="navegacion">
+        <ul class="lista-nav">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        
+        <!-- Barra de búsqueda -->
+        <div class="buscador">
+            <input type="text" placeholder="Buscar mates, termos...">
+        </div>
+        </nav>
+        <div class="container-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+            <div class="count-product">
+                <span id="contador-productos">0</span>
+            </div>
+            <div class="container-card-products hidden-cart">
+                <div class="cart-product">
+                    <div class="info-cart-product">
+                        <span class="cantidad-producto-carrito">
+                            <p class="titulo-producto-carrito">Mate de acero termico 236ML</p>
+                        </span>
+                        <span class="precio-producto-carrito">$200</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </div>
+                <div class="cart-total">
+                    <h3>Total</h3>
+                    <span class="total-pagar">$500</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main> 
+        <!-- SECCIÓN DE PRODUCTOS (Ordenada dentro de un contenedor) -->
+        <section class="container-items">
+            <div class="item">
+                <figure>
+                    <img src="assets/imagenes/mate todo.jpg" alt="mate">
+                </figure>
+                <div class="info-producto">
+                    <h2>Mate de acero termico 236ML</h2>
+                    <p class="precio">$200</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <figure>
+                    <img src="assets/imagenes/termo.webp" alt="Termo">
+                </figure>
+                <div class="info-producto">
+                    <h2>Termo de acero de 1L</h2>
+                    <p class="precio">$200</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <figure>
+                    <img src="assets/imagenes/manta portatil.jpg" alt="Manta">
+                </figure>
+                <div class="info-producto">
+                    <h2>Manta portatil nomade</h2>
+                    <p class="precio">$200</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <figure>
+                    <img src="assets/imagenes/portamate.webp" alt="producto">
+                </figure>
+                <div class="info-producto">
+                    <h2>Porta Mate</h2>
+                    <p class="precio">$200</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+             <div class="item">
+                <figure>
+                    <img src="assets/imagenes/set mate y termo.jpg" alt="producto">
+                </figure>
+                <div class="info-producto">
+                    <h2>Set mate y termo</h2>
+                    <p class="precio">$200</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- Aca puedo seguir agregando items -->
+        </section>
+
+        <!-- SECCIÓN DE RESEÑAS -->
+        <section class="reseñas">
+            <div class="card">
+                <div class="estrellas">★★★★★</div>
+                <h3>Maria Lopez</h3>
+                <p>¡Excelente atención y productos de primera! Sin duda, volveré a comprar.</p>
+            </div> 
+            <div class="card">
+                <div class="estrellas">★★★★★</div>
+                <h3>Carlos Pérez</h3>
+                <p>"Muy recomendable. El envío fue súper rápido y llegó todo en perfectas condiciones."</p>
+            </div> 
+            <div class="card">
+                <div class="estrellas">★★★★★</div> 
+                <h3>Lucía Fernández</h3>
+                <p>"La calidad supera ampliamente el precio. ¡Muy contenta con mi compra!"</p>
+            </div> 
+        </section>
+
+        <!-- SECCIÓN DE CONTACTO Y MAPA (Dos columnas separadas) -->
+        <section class="contacto-seccion">
+            <div class="contenido-izq">
+                <h2>Contacto</h2>
+                <p>¿Tenés dudas sobre nuestros kits materos? ¡Escribinos!</p>
+               <form action="https://formspree.io/f/mbglvnbp" method="POST">
+                    <input type="text" placeholder="Tu nombre">
+                    <input type="email" placeholder="Tu correo">
+                    <textarea placeholder="Escribe tu mensaje..."></textarea>
+                    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                </form>
+            </div>
+            <div class="mapa-der">
+                <iframe src="https://www.google.com/maps/embed?..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+   <footer>
+    <p>&copy; 2026 TODO MATIENZO. Todos los derechos reservados.</p>
+    <ul class="footer-links">
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Política de Privacidad</a></li>
+    </ul>
+    <!-- Métodos de pago -->
+        <div class="metodos-pago">
+            <h4>Métodos de Pago</h4>
+            <div class="iconos-pago">
+                <span>💳 Tarjeta de Crédito / Débito</span>
+                <span>🏦 Transferencia Bancaria</span>
+                <span>💵 Efectivo / Mercado Pago</span>
+            </div>
+        </div>
+
+        <ul class="footer-links">
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
