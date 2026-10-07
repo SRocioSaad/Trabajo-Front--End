@@ -13,14 +13,14 @@
 </head>
 
 <body> 
-    <header> 
+    <header id="inicio"> 
         <h1>Tienda</h1>
 
         <nav class="navegacion">
         <ul class="lista-nav">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
         
         <!-- Barra de búsqueda -->
@@ -57,7 +57,7 @@
 
     <main> 
         <!-- SECCIÓN DE PRODUCTOS (Ordenada dentro de un contenedor) -->
-        <section class="container-items">
+        <section id="productos" class="container-items">
             <div class="item">
                 <figure>
                     <img src="assets/imagenes/mate todo.jpg" alt="mate">
@@ -111,11 +111,11 @@
                     <button>Añadir al carrito</button>
                 </div>
             </div>
-            <!-- Aca puedo seguir agregando items -->
+            <!-- Aca puedo seguir agregando items... -->
         </section>
 
         <!-- SECCIÓN DE RESEÑAS -->
-        <section class="reseñas">
+        <section id="contacto" class="reseñas">
             <div class="card">
                 <div class="estrellas">★★★★★</div>
                 <h3>Maria Lopez</h3>
@@ -167,10 +167,7 @@
             </div>
         </div>
 
-        <ul class="footer-links">
-            <li><a href="#">Términos y Condiciones</a></li>
-            <li><a href="#">Política de Privacidad</a></li>
-        </ul>
+
     </div>
 </footer>
 </body>

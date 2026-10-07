@@ -270,3 +270,7 @@ footer p {
 .footer-links a:hover {
     color: #27ae60; 
 }
+
+@media screen and (max-width: 760px) {
+   header {
+      flex-direction: column;}}
