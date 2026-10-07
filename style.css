@@ -1,3 +1,8 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
 /* Globales */
 *{
     margin: 0;
