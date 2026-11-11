@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Online de TODO MATIENZO</title>
-    <link rel="icon" type="image/png" href="assets/imagenes/mate-de-coca.png">
+    <link rel="icon" type="image/png" href="assets/imagenes/bichito.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,10 @@
 
 <body> 
     <header id="inicio"> 
-        <h1>Tienda</h1>
+        <div class="logo-tienda">
+    <img src="assets/imagenes/bichito.png" alt="Logo Matienzo" class="logo-img">
+        <!-- <h1>Tienda</h1> -->
+        </div>
 
         <nav class="navegacion">
         <ul class="lista-nav">
@@ -56,6 +59,7 @@
     </header>
 
     <main> 
+        </section>
         <!-- SECCIÓN DE PRODUCTOS (Ordenada dentro de un contenedor) -->
         <section id="productos" class="container-items">
             <div class="item">
@@ -110,7 +114,28 @@
                     <p class="precio">$200</p>
                     <button>Añadir al carrito</button>
                 </div>
+                
             </div>
+            <div class="item">
+                <figure>
+                    <img src="assets/imagenes/Mate 🧉 - Argentina 🇦🇷.jpg" alt="Manta">
+                </figure>
+                <div class="info-producto">
+                    <h2>Manta portatil nomade</h2>
+                    <p class="precio">$200</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+
+             <div class="item">
+                <figure>
+                    <img src="assets/imagenes/yerbero.jpg" alt="Yerbero">
+                </figure>
+                <div class="info-producto">
+                    <h2>Yerbero con sol bordado</h2>
+                    <p class="precio">$200</p>
+                    <button>Añadir al carrito</button>
+                </div>
             <!-- Aca puedo seguir agregando items... -->
         </section>
 
@@ -137,13 +162,13 @@
         <section class="contacto-seccion">
             <div class="contenido-izq">
                 <h2>Contacto</h2>
-                <p>¿Tenés dudas sobre nuestros kits materos? ¡Escribinos!</p>
-               <form action="https://formspree.io/f/mbglvnbp" method="POST">
-                    <input type="text" placeholder="Tu nombre">
-                    <input type="email" placeholder="Tu correo">
-                    <textarea placeholder="Escribe tu mensaje..."></textarea>
-                    <button type="submit" class="btn-enviar">Enviar mensaje</button>
-                </form>
+              <p>¿Tenés dudas sobre nuestros kits materos? ¡Escribinos!</p>
+              <form action="https://formspree.io/f/mbglvnbp" method="POST">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo" required>
+                <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+                <button type="submit" class="btn-enviar">Enviar mensaje</button>
+              </form>
             </div>
             <div class="mapa-der">
                 <iframe src="https://www.google.com/maps/embed?..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -170,5 +195,6 @@
 
     </div>
 </footer>
+    <script src="index.js"></script>
 </body>
 </html>
