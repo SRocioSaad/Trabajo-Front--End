@@ -128,7 +128,7 @@ if (listaCarrito) {
     });
 }
 
-// 3. Vaciar carrito
+// Vaciar carrito
 if (btnVaciar) {
     btnVaciar.addEventListener('click', () => {
         carrito = [];
@@ -137,7 +137,7 @@ if (btnVaciar) {
     });
 }
 
-// 4. Mostrar sección para finalizar compra
+// Mostrar sección para finalizar compra
 if (btnFinalizar) {
     btnFinalizar.addEventListener('click', () => {
         if (carrito.length === 0) return;
@@ -146,7 +146,6 @@ if (btnFinalizar) {
     });
 }
 
-// 5. Confirmar compra y mostrar cartel de agradecimiento
 if (formCheckout) {
     formCheckout.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -160,7 +159,6 @@ if (formCheckout) {
     });
 }
 
-// Dibujar carrito, contador superior, total y persistir en localStorage
 function actualizarCarrito() {
     if (!listaCarrito) return;
 
@@ -218,13 +216,12 @@ function actualizarCarrito() {
     guardarCarritoEnStorage(carrito);
 }
 
-// Renderiza al cargar la página lo que esté guardado en localStorage
+
 actualizarCarrito();
 
 const inputBuscador = document.querySelector('.buscador input');
 const tarjetasProductos = document.querySelectorAll('.container-items .item');
 
-// Normaliza texto: minúsculas y sin tildes (ej: "térmico" -> "termico")
 function normalizarTexto(texto) {
     return texto
         .toLowerCase()
@@ -233,7 +230,7 @@ function normalizarTexto(texto) {
         .trim();
 }
 
-// Verifica si alguna palabra exacta del texto coincide con el término buscado
+// Verifica si alguna palabra  del texto coincide con el término buscado
 function coincidePalabraExacta(textoProducto, terminoBuscado) {
     const palabras = normalizarTexto(textoProducto).split(/[^a-z0-9]+/).filter(Boolean);
     return palabras.some((p) => p.startsWith(terminoBuscado));
