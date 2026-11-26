@@ -1,3 +1,15 @@
+const linkInicio = document.querySelector('a[href="#inicio"]');
+
+if (linkInicio) {
+    linkInicio.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 const btnCart = document.querySelector('.container-icon');
 const containerCardProducts = document.querySelector('.container-card-products');
 const productosSection = document.querySelector('.container-items');
