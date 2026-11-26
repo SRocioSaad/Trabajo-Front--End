@@ -15,21 +15,20 @@
 <body> 
     <header id="inicio"> 
         <div class="logo-tienda">
-    <img src="assets/imagenes/bichito.png" alt="Logo Matienzo" class="logo-img">
-        <!-- <h1>Tienda</h1> -->
+            <img src="assets/imagenes/bichito.png" alt="Logo Matienzo" class="logo-img">
         </div>
 
         <nav class="navegacion">
-        <ul class="lista-nav">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        
-        <!-- Barra de búsqueda -->
-        <div class="buscador">
-            <input type="text" placeholder="Buscar mates, termos...">
-        </div>
+            <ul class="lista-nav">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            
+            <!-- Barra de búsqueda -->
+            <div class="buscador">
+                <input type="text" placeholder="Buscar mates, termos...">
+            </div>
         </nav>
         <div class="container-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
@@ -59,12 +58,11 @@
     </header>
 
     <main> 
-        </section>
-        <!-- SECCIÓN DE PRODUCTOS (Ordenada dentro de un contenedor) -->
+        <!-- SECCIÓN DE PRODUCTOS -->
         <section id="productos" class="container-items">
             <div class="item">
                 <figure>
-                    <img src="assets/imagenes/mate todo.jpg" alt="mate">
+                    <img src="assets/imagenes/matemate (2).png" alt="mate">
                 </figure>
                 <div class="info-producto">
                     <h2>Mate de acero termico 236ML</h2>
@@ -75,7 +73,7 @@
 
             <div class="item">
                 <figure>
-                    <img src="assets/imagenes/termo.webp" alt="Termo">
+                    <img src="assets/imagenes/termo stanley.png" alt="Termo">
                 </figure>
                 <div class="info-producto">
                     <h2>Termo de acero de 1L</h2>
@@ -86,7 +84,7 @@
 
             <div class="item">
                 <figure>
-                    <img src="assets/imagenes/manta portatil.jpg" alt="Manta">
+                    <img src="assets/imagenes/manta.png" alt="Manta">
                 </figure>
                 <div class="info-producto">
                     <h2>Manta portatil nomade</h2>
@@ -97,7 +95,7 @@
 
             <div class="item">
                 <figure>
-                    <img src="assets/imagenes/portamate.webp" alt="producto">
+                    <img src="assets/imagenes/bolso.png" alt="producto">
                 </figure>
                 <div class="info-producto">
                     <h2>Porta Mate</h2>
@@ -105,42 +103,53 @@
                     <button>Añadir al carrito</button>
                 </div>
             </div>
-             <div class="item">
+
+            <div class="item">
                 <figure>
-                    <img src="assets/imagenes/set mate y termo.jpg" alt="producto">
+                    <img src="assets/imagenes/set mate termo.jpeg" alt="producto">
                 </figure>
                 <div class="info-producto">
                     <h2>Set mate y termo</h2>
                     <p class="precio">$200</p>
                     <button>Añadir al carrito</button>
                 </div>
-                
             </div>
+
             <div class="item">
                 <figure>
-                    <img src="assets/imagenes/Mate 🧉 - Argentina 🇦🇷.jpg" alt="Manta">
+                    <img src="assets/imagenes/bombilla.png" alt="Bombilla">
                 </figure>
                 <div class="info-producto">
-                    <h2>Manta portatil nomade</h2>
+                    <h2>Bombilla de acero</h2>
                     <p class="precio">$200</p>
                     <button>Añadir al carrito</button>
                 </div>
             </div>
 
-             <div class="item">
+            <div class="item">
                 <figure>
-                    <img src="assets/imagenes/yerbero.jpg" alt="Yerbero">
+                    <img src="assets/imagenes/yerbero.jpeg" alt="Yerbero">
                 </figure>
                 <div class="info-producto">
                     <h2>Yerbero con sol bordado</h2>
                     <p class="precio">$200</p>
                     <button>Añadir al carrito</button>
                 </div>
-            <!-- Aca puedo seguir agregando items... -->
+            </div>
+             <div class="item">
+                <figure>
+                    <img src="assets/imagenes/azucar.png" alt="Azucarero">
+                </figure>
+                <div class="info-producto">
+                    <h2>Azucarero</h2>
+                    <p class="precio">$200</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
         </section>
 
         <!-- SECCIÓN DE RESEÑAS -->
-        <section id="contacto" class="reseñas">
+        <section class="reseñas">
             <div class="card">
                 <div class="estrellas">★★★★★</div>
                 <h3>Maria Lopez</h3>
@@ -158,17 +167,17 @@
             </div> 
         </section>
 
-        <!-- SECCIÓN DE CONTACTO Y MAPA (Dos columnas separadas) -->
-        <section class="contacto-seccion">
+        <!-- SECCIÓN DE CONTACTO Y MAPA -->
+        <section id="contacto" class="contacto-seccion">
             <div class="contenido-izq">
                 <h2>Contacto</h2>
-              <p>¿Tenés dudas sobre nuestros kits materos? ¡Escribinos!</p>
-              <form action="https://formspree.io/f/mbglvnbp" method="POST">
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu correo" required>
-                <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-                <button type="submit" class="btn-enviar">Enviar mensaje</button>
-              </form>
+                <p>¿Tenés dudas sobre nuestros kits materos? ¡Escribinos!</p>
+                <form action="https://formspree.io/f/mbglvnbp" method="POST">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu correo" required>
+                    <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+                    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                </form>
             </div>
             <div class="mapa-der">
                 <iframe src="https://www.google.com/maps/embed?..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -176,13 +185,13 @@
         </section>
     </main>
 
-   <footer>
-    <p>&copy; 2026 TODO MATIENZO. Todos los derechos reservados.</p>
-    <ul class="footer-links">
-        <li><a href="#">Términos y Condiciones</a></li>
-        <li><a href="#">Política de Privacidad</a></li>
-    </ul>
-    <!-- Métodos de pago -->
+    <footer>
+        <p>&copy; 2026 TODO MATIENZO. Todos los derechos reservados.</p>
+        <ul class="footer-links">
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+        <!-- Métodos de pago -->
         <div class="metodos-pago">
             <h4>Métodos de Pago</h4>
             <div class="iconos-pago">
@@ -191,10 +200,8 @@
                 <span>💵 Efectivo / Mercado Pago</span>
             </div>
         </div>
+    </footer>
 
-
-    </div>
-</footer>
     <script src="index.js"></script>
 </body>
 </html>
