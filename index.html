@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Online de TODO MATIENZO</title>
-    <link rel="icon" type="image/png" href="assets/imagenes/bichito.png">
+    <link rel="icon" type="image/png" href="assets/imagenes/matecito.jpeg">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <body> 
     <header id="inicio"> 
         <div class="logo-tienda">
-            <img src="assets/imagenes/bichito.png" alt="Logo Matienzo" class="logo-img">
+            <img src="assets/imagenes/matecito.jpeg" alt="Logo Matienzo" class="logo-img">
         </div>
 
         <nav class="navegacion">
@@ -49,9 +49,11 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                 </div>
-                <div class="cart-total">
-                    <h3>Total</h3>
-                    <span class="total-pagar">$500</span>
+                 <div class="carrito">
+                  <h2>🛒 Carrito (<span id="contador">0</span>)</h2>
+                  <ul id="lista-carrito"></ul>
+                  <h3>Total: $<span id="total">0</span></h3>
+                  <button class="btn-vaciar" id="vaciar-carrito">Vaciar Carrito</button>
                 </div>
             </div>
         </div>
