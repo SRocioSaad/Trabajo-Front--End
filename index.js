@@ -220,3 +220,39 @@ function actualizarCarrito() {
 
 // Renderiza al cargar la página lo que esté guardado en localStorage
 actualizarCarrito();
+
+const inputBuscador = document.querySelector('.buscador input');
+const tarjetasProductos = document.querySelectorAll('.container-items .item');
+
+// Normaliza texto: minúsculas y sin tildes (ej: "térmico" -> "termico")
+function normalizarTexto(texto) {
+    return texto
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .trim();
+}
+
+// Verifica si alguna palabra exacta del texto coincide con el término buscado
+function coincidePalabraExacta(textoProducto, terminoBuscado) {
+    const palabras = normalizarTexto(textoProducto).split(/[^a-z0-9]+/).filter(Boolean);
+    return palabras.some((p) => p.startsWith(terminoBuscado));
+}
+
+if (inputBuscador && tarjetasProductos.length > 0) {
+    inputBuscador.addEventListener('input', (e) => {
+        const consulta = normalizarTexto(e.target.value);
+
+        tarjetasProductos.forEach((card) => {
+            if (!consulta) {
+                card.style.display = '';
+                return;
+            }
+
+            const titulo = card.querySelector('.info-producto h2')?.textContent || '';
+            const esCoincidencia = coincidePalabraExacta(titulo, consulta);
+
+            card.style.display = esCoincidencia ? '' : 'none';
+        });
+    });
+}
