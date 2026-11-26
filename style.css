@@ -483,3 +483,152 @@ footer p {
     padding: 0 10px;
   }
 }
+
+.hidden {
+    display: none !important;
+}
+
+.cart-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-cart-product {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.titulo-producto-carrito {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.precio-producto-carrito {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.controles-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-cantidad {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-cantidad:hover {
+    background-color: #f0f0f0;
+}
+
+.numero-cantidad {
+    min-width: 18px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cart-product .icon-close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.carrito-vacio {
+    text-align: center;
+    color: #666;
+    margin: 15px 0;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.carrito-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-vaciar,
+.btn-finalizar,
+.btn-confirmar {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-vaciar {
+    background-color: #e5e5e5;
+    color: #222;
+    flex: 1;
+}
+
+.btn-finalizar,
+.btn-confirmar {
+    background-color: #000;
+    color: #fff;
+    flex: 1.5;
+}
+
+.seccion-checkout {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.seccion-checkout h4 {
+    margin: 0 0 10px 0;
+}
+
+#form-checkout {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#form-checkout input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.mensaje-gracias {
+    margin-top: 14px;
+    padding: 12px;
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+:root {
+    --bg-pagina: #faf5ee;        /* Crema cálido (reemplaza el blanco frío) */
+    --bg-tarjeta: #ffffff;
+    --color-principal: #b84a27;   /* Terracota / ladrillo cálido */
+    --color-principal-hover: #96381b;
+    --color-acento: #d4962a;      /* Dorado / ocre del sol */
+    --color-texto: #231f1e;       /* Carbón cálido (más suave que negro puro) */
+    --color-texto-suave: #5c534f;
+    --borde-suave: #eadfd2;
+}

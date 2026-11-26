@@ -37,26 +37,40 @@
             <div class="count-product">
                 <span id="contador-productos">0</span>
             </div>
-            <div class="container-card-products hidden-cart">
-                <div class="cart-product">
-                    <div class="info-cart-product">
-                        <span class="cantidad-producto-carrito">
-                            <p class="titulo-producto-carrito">Mate de acero termico 236ML</p>
-                        </span>
-                        <span class="precio-producto-carrito">$200</span>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    </svg>
-                </div>
-                 <div class="carrito">
-                  <h2>🛒 Carrito (<span id="contador">0</span>)</h2>
-                  <ul id="lista-carrito"></ul>
-                  <h3>Total: $<span id="total">0</span></h3>
-                  <button class="btn-vaciar" id="vaciar-carrito">Vaciar Carrito</button>
-                </div>
-            </div>
+           <div class="container-card-products hidden-cart">
+    
+    <div id="lista-carrito"></div>
+
+    <p class="carrito-vacio">Tu carrito está vacío.</p>
+
+    <div class="carrito-footer hidden">
+        <div class="cart-total">
+            <h3>Total:</h3>
+            <span class="total-pagar">$0</span>
         </div>
+
+        <div class="carrito-botones">
+            <button type="button" class="btn-vaciar" id="vaciar-carrito">Vaciar Carrito</button>
+            <button type="button" class="btn-finalizar" id="btn-finalizar">Finalizar compra</button>
+        </div>
+    </div>
+
+    <!-- Sección para finalizar la compra -->
+    <div class="seccion-checkout hidden" id="seccion-checkout">
+        <h4>Finalizar compra</h4>
+        <form id="form-checkout">
+            <input type="text" placeholder="Nombre y apellido" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="text" placeholder="Dirección de envío" required>
+            <button type="submit" class="btn-confirmar">Confirmar compra</button>
+        </form>
+    </div>
+
+    <!-- Cartel de confirmación -->
+    <div class="mensaje-gracias hidden" id="mensaje-gracias">
+        <p>¡Muchas gracias por comprar en <strong>Todo Matienzo</strong>, su compra fue realizada con éxito!</p>
+    </div>
+</div>
     </header>
 
     <main> 
