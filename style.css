@@ -622,13 +622,216 @@ footer p {
     text-align: center;
 }
 
-:root {
-    --bg-pagina: #faf5ee;        /* Crema cálido (reemplaza el blanco frío) */
-    --bg-tarjeta: #ffffff;
-    --color-principal: #b84a27;   /* Terracota / ladrillo cálido */
-    --color-principal-hover: #96381b;
-    --color-acento: #d4962a;      /* Dorado / ocre del sol */
-    --color-texto: #231f1e;       /* Carbón cálido (más suave que negro puro) */
-    --color-texto-suave: #5c534f;
-    --borde-suave: #eadfd2;
+
+.hero-promos {
+    width: 100%;
+    max-width: 1350px;
+    margin: 20px auto 35px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.slider-contenedor {
+    position: relative;
+    background: linear-gradient(135deg, #141414 0%, #261b16 65%, #3a2318 100%);
+    color: #ffffff;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    padding: 40px 70px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    animation: fadeSlide 0.5s ease;
+}
+
+.slide.activo {
+    display: flex;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.slide-texto {
+    flex: 1.2;
+}
+
+.badge-bf {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #141414;
+    font-weight: 900;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    letter-spacing: 1px;
+    transform: rotate(-2deg);
+    margin-bottom: 14px;
+}
+
+.slide-texto h2 {
+    font-size: 2.1rem;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    line-height: 1.1;
+}
+
+.promo-destacada {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 8px 0;
+}
+
+.promo-destacada span {
+    color: #f0be59;
+    font-size: 2.5rem;
+}
+
+.promo-sub {
+    font-size: 1rem;
+    color: #e2d8ce;
+    margin-top: 8px;
+}
+
+.slide-img {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-img img {
+    max-height: 250px;
+    width: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Flechas */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.slider-btn.prev { left: 16px; }
+.slider-btn.next { right: 16px; }
+
+/* Puntitos indicadores */
+.slider-dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+}
+
+.dot.activo {
+    background: #f0be59;
+    transform: scale(1.2);
+}
+
+/* Barra de cuenta regresiva */
+.countdown-bar {
+    background-color: #b84a27;
+    color: #ffffff;
+    border-radius: 0 0 16px 16px;
+    padding: 16px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.countdown-titulo {
+    font-weight: 800;
+    font-size: 1.05rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.countdown-reloj {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tiempo-caja {
+    background-color: #141414;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 52px;
+}
+
+.tiempo-caja span {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #f0be59;
+    line-height: 1.1;
+}
+
+.tiempo-caja small {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #ddd;
+}
+
+.separador {
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .slide {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 25px 40px 25px;
+    }
+
+    .slide-texto h2 {
+        font-size: 1.6rem;
+    }
+
+    .promo-destacada span {
+        font-size: 2rem;
+    }
+
+    .slide-img img {
+        max-height: 180px;
+    }
 }

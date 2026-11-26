@@ -253,3 +253,89 @@ if (inputBuscador && tarjetasProductos.length > 0) {
         });
     });
 }
+
+// --- CARRUSEL AUTOMÁTICO CADA 5 SEGUNDOS ---
+const slides = document.querySelectorAll('.hero-promos .slide');
+const dots = document.querySelectorAll('.hero-promos .dot');
+const btnPrev = document.querySelector('.hero-promos .prev');
+const btnNext = document.querySelector('.hero-promos .next');
+
+let slideActual = 0;
+let intervaloSlider;
+
+function mostrarSlide(indice) {
+    if (slides.length === 0) return;
+
+    slideActual = (indice + slides.length) % slides.length;
+
+    slides.forEach((s, i) => s.classList.toggle('activo', i === slideActual));
+    dots.forEach((d, i) => d.classList.toggle('activo', i === slideActual));
+}
+
+function iniciarAutoplay() {
+    clearInterval(intervaloSlider);
+    intervaloSlider = setInterval(() => {
+        mostrarSlide(slideActual + 1);
+    }, 5000); // 5000 ms = 5 segundos
+}
+
+if (slides.length > 0) {
+    btnNext?.addEventListener('click', () => {
+        mostrarSlide(slideActual + 1);
+        iniciarAutoplay();
+    });
+
+    btnPrev?.addEventListener('click', () => {
+        mostrarSlide(slideActual - 1);
+        iniciarAutoplay();
+    });
+
+    dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+            const idx = Number(dot.dataset.index);
+            mostrarSlide(idx);
+            iniciarAutoplay();
+        });
+    });
+
+    iniciarAutoplay();
+}
+
+// --- CUENTA REGRESIVA BLACK FRIDAY ---
+// Ejemplo: termina dentro de 3 días desde que se abre la página (o podés poner una fecha fija)
+const fechaFinBlackFriday = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000);
+// Si preferís una fecha fija, reemplazá la línea de arriba por:
+// const fechaFinBlackFriday = new Date('2026-11-30T23:59:59');
+
+const diasEl = document.getElementById('dias');
+const horasEl = document.getElementById('horas');
+const minutosEl = document.getElementById('minutos');
+const segundosEl = document.getElementById('segundos');
+
+function actualizarCuentaRegresiva() {
+    if (!diasEl || !horasEl || !minutosEl || !segundosEl) return;
+
+    const ahora = new Date().getTime();
+    const diferencia = fechaFinBlackFriday.getTime() - ahora;
+
+    if (diferencia <= 0) {
+        diasEl.textContent = '00';
+        horasEl.textContent = '00';
+        minutosEl.textContent = '00';
+        segundosEl.textContent = '00';
+        return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((diferencia / 1000 / 60) % 60);
+    const segundos = Math.floor((diferencia / 1000) % 60);
+
+    diasEl.textContent = String(dias).padStart(2, '0');
+    horasEl.textContent = String(horas).padStart(2, '0');
+    minutosEl.textContent = String(minutos).padStart(2, '0');
+    segundosEl.textContent = String(segundos).padStart(2, '0');
+}
+
+actualizarCuentaRegresiva();
+setInterval(actualizarCuentaRegresiva, 1000);
